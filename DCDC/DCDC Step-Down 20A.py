@@ -3,7 +3,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_excel('DCDC Step-Down 20A.xlsx')
+df = pd.read_excel('data/DCDC Step-Down 20A.xlsx')
 print (df)
 
 x_1 = df.iloc[1:4, 9]
