@@ -43,4 +43,7 @@ ax2.plot(x_2, y_2, color=color)
 ax2.tick_params(axis='y', labelcolor=color)
 
 fig.tight_layout()  # otherwise the right y-label is slightly clipped
-plt.show()
+
+#plt.show()
+
+plt.savefig('results/4151-103-cp.svg', format='svg', dpi=1200)

@@ -28,8 +28,8 @@ plt.plot([0,20], [0,0], linestyle='--', color='black')
 plt.xticks(x_1)
 plt.xlabel('Messpunkt')
 plt.ylabel('Abweichung [%]')
-plt.legend(['Arduino', 'ESP32 1-fach gesampelt','ESP32 5-fach gesampelt', 'ESP32 10-fach gesampelt', "Idealwert"], loc='lower left')
+plt.legend(['Arduino 1-fach gesampelt', 'ESP32 1-fach gesampelt','ESP32 5-fach gesampelt', 'ESP32 10-fach gesampelt', "Idealwert"], loc='lower left')
 
-plt.show()
+#plt.show()
 
-#plt.savefig('results/genauigkeit_prozent.svg', format='svg', dpi=1200)
+plt.savefig('results/genauigkeit_prozent.svg', format='svg', dpi=1200)

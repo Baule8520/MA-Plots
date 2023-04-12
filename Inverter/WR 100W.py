@@ -24,4 +24,6 @@ plt.ylim([78, 85])
 plt.xlabel('Ausgangsleistung [W]')
 plt.ylabel('Wirkungsgrad [%]')
 
-plt.show()
+#plt.show()
+
+plt.savefig('results/WR_100W.svg', format='svg', dpi=1200)

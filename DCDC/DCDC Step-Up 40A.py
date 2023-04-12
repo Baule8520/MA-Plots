@@ -28,4 +28,6 @@ plt.xlabel('Ausgangsleistung [W]')
 plt.ylabel('Wirkungsgrad [%]')
 plt.legend(['Ausgangsspannung 15 V', 'Ausgangsspannung 20 V','Ausgangsspannung 25 V', 'Ausgangsspannung 30 V'], loc='upper right')
 
-plt.show()
+#plt.show()
+
+plt.savefig('results/DCDC_SU_20A.svg', format='svg', dpi=1200)

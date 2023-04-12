@@ -19,7 +19,7 @@ plt.fill_between(x, y_unten, color='green', alpha=.5)
 plt.ylim([-1, 1])
 plt.xlabel('Spannung [V]')
 plt.ylabel('Abweichung [%]')
-plt.legend(['Arduino', "Idealwert"], loc='lower left')
+plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
