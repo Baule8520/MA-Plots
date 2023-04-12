@@ -26,4 +26,6 @@ plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
 plt.legend(['1-fach gesampelt', '5-fach gesampelt','10-fach gesampelt', "Idealwert"], loc='lower right')
 
-plt.show()
+# plt.show()
+
+plt.savefig('results/esp32_adc.svg', format='svg', dpi=1200)

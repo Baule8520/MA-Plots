@@ -20,4 +20,6 @@ plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
-plt.show()
+#plt.show()
+
+plt.savefig('results/arduino_adc.svg', format='svg', dpi=1200)
