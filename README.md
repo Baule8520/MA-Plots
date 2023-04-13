@@ -4,7 +4,7 @@
 
 More information can be found in the Readme of the selected hardware folder...
 
-- ADC = Analog-Digital-Konverter
+- ADC = Analog-Digital-Konverter (and current measurement with Shunt)
 - DCDC = Gleichspannungswandler [outdated]
 - Inverter = Wechselrichter [outdated]
 - MCP4151 = Elektronisches Potentiometer
