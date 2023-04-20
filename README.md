@@ -4,10 +4,12 @@
 
 More information can be found in the Readme of the selected hardware folder...
 
-- ADC = Analog-Digital-Konverter (and current measurement with Shunt)
+- ADC = Analog-Digital-Konverter
 - DCDC = Gleichspannungswandler [outdated]
+- Hall_Sensor = Strommessung mit Hall Sensor
 - Inverter = Wechselrichter [outdated]
 - MCP4151 = Elektronisches Potentiometer
+- Shunt = Strommessung mit Shunt Widerstand
 
 #### Used Software
 
