@@ -18,7 +18,7 @@ plt.xlabel('Referenzstrom [A]')
 plt.ylabel('gemessener Strom [A]')
 plt.legend(['1-fach gesampelt', '10-fach gesampelt', "Idealwert"], loc='lower right')
 
-plt.savefig('results/shunt.svg', format='svg', dpi=1200)
+plt.savefig('results/shunt_arduino.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
@@ -46,7 +46,7 @@ plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [%]')
 plt.legend(['1-fach gesampelt','10-fach gesampelt', "Idealwert"], loc='lower left')
 
-plt.savefig('results/shunt_prozent.svg', format='svg', dpi=1200)
+plt.savefig('results/shunt_arduino_prozent.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
@@ -74,5 +74,5 @@ plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [mA]')
 plt.legend(['1-fach gesampelt','10-fach gesampelt', "Idealwert"], loc='lower left')
 
-plt.savefig('results/shunt_a.svg', format='svg', dpi=1200)
+plt.savefig('results/shunt_arduino_a.svg', format='svg', dpi=1200)
 plt.clf()

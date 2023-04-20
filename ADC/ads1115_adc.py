@@ -1,37 +1,34 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_excel('data/11_04_23.xlsx')
-print (df)
+df = pd.read_excel('data/ADS1115.xlsx')
 
 x_1 = df.iloc[2:23, 0]
 print(x_1)
 
-y_1 = df.iloc[2:23, 2]
+y_1 = df.iloc[2:23, 1]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,5], [0,5], linestyle='--', color='black')
 
-#plt.xlim([0, 3.3])
-#plt.ylim([0, 3.3])
 plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/arduino_adc.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_adc.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
-y_1 = df.iloc[2:23, 1]
+y_1 = df.iloc[2:23, 3]
 
 x_1 = df.iloc[2:23, 0]
 
 x = [0,5]
-y_oben = [0.09766, 0.09766]
-y_unten = [-0.09766, -0.09766]
+y_oben = [0.00152588, 0.00152588]
+y_unten = [-0.00152588, -0.00152588]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,5], [0,0], linestyle='--', color='black')
@@ -45,19 +42,19 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/arduino_genauigkeit_prozent.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_genauigkeit_prozent.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
-y_1 = df.iloc[2:23, 1]
+y_1 = df.iloc[2:23, 4]
 y_1 = y_1 * 1000
 
 x_1 = df.iloc[2:23, 0]
 
 x = [0,5]
-y_oben = [4.883, 4.883]
-y_unten = [-4.883, -4.883]
+y_oben = [0.076294, 0.076294]
+y_unten = [-0.076294, -0.076294]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,5], [0,0], linestyle='--', color='black')
@@ -71,4 +68,4 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/arduino_genauigkeit_v.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_genauigkeit_v.svg', format='svg', dpi=1200)

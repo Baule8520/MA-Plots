@@ -2,17 +2,24 @@
 
 ## Main Purpose
 
-I measured how accurate the AD Converters in ESP32 & Arduino Uno are.
+I measured how accurate diverse analog digital converters (ADC) are...
 
 ## Circuit Diagrams
+
+- For the voltage measurement:
+
+![Circuit Diagram](Spannungsmessung.png)
+
+- For the shunt measurement:
 
 Will follow...
 
 ## Software
 
-- [Here](https://github.com/PaulusElektrus/ADC_Uno) you can find the software which ran on the Arduino Uno to generate the data.
-- [Here](https://github.com/PaulusElektrus/ADC_ESP32) you can find the software which ran on the ESP32 to generate the data.
-- [Here](https://github.com/PaulusElektrus/Uno_Shunt) is the program which ran on Arduino to measure the Voltage over the 0,1 Ohm shunt.
+- [Arduino](https://github.com/PaulusElektrus/ADC_Uno)
+- [ESP32](https://github.com/PaulusElektrus/ADC_ESP32)
+- [Shunt](https://github.com/PaulusElektrus/Uno_Shunt) --> 0.1 Ohm shunt
+- [ADS1115](https://github.com/PaulusElektrus/Arduino_and_ADS1115)
 
 ## Plots
 
@@ -23,3 +30,4 @@ Can be found under /results.
 - ESP32 ADC is very unprecise und unlinear --> Not usable for my project
 - Arduino Uno is only 10 bit but very precise and linear --> Good usable for my project
 - The 0,1 Ohm shunt results with the arduino are acceptable
+- ADS1115 is with the integrated Vref and 16bit the best choice over all!
