@@ -13,9 +13,9 @@ I measured how accurate Shunt current measurement is...
 
 - For the ADS1115 measurement:
 
-![Circuit Diagram](images/ADS_Shunt_Schaltplan.png)
+![Circuit Diagram](./images/ADS_Shunt_Schaltplan.png)
 
-![Breadboard](images/ADS_Shunt_Steckplatine.png)
+![Breadboard](./images/ADS_Shunt_Steckplatine.png)
 
 ## Software
 
