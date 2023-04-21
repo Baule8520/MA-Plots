@@ -1,6 +1,6 @@
-# Shunt
+# Shunt Current Measurement
 
-## Main Purpose
+##  Main Purpose
 
 I measured how accurate Shunt current measurement is...
 
@@ -9,11 +9,13 @@ I measured how accurate Shunt current measurement is...
 
 ## Circuit Diagrams
 
+- For the 0.1 Ohm shunt with Arduino: Will follow soon...
+
 - For the ADS1115 measurement:
 
 ![Circuit Diagram](images/ADS_Shunt_Schaltplan.png)
 
-![[Breadboard](images/ADS_Shunt_Steckplatine.png)
+![Breadboard](images/ADS_Shunt_Steckplatine.png)
 
 ## Software
 
