@@ -15,14 +15,12 @@ plt.xlabel('Referenzstrom [A]')
 plt.ylabel('gemessener Strom [A]')
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
-plt.savefig('results/shunt_ads.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
 y_1 = df.iloc[2:26, 6]
-
-x_1 = df.iloc[2:26, 0]
 
 x = [0,4]
 y_oben = [0.0346791, 0.0346791]
@@ -38,14 +36,12 @@ plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [%]')
 plt.legend(['Messwert',"Idealwert"], loc='lower right')
 
-plt.savefig('results/shunt_ads_prozent.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_prozent.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
 y_1 = df.iloc[2:26, 4]
-
-x_1 = df.iloc[2:26, 0]
 
 x = [0,4]
 y_oben = [1.387163636, 1.387163636]
@@ -61,51 +57,5 @@ plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [mA]')
 plt.legend(['Messwert',"Idealwert"], loc='lower right')
 
-plt.savefig('results/shunt_ads_ma.svg', format='svg', dpi=1200)
-plt.clf()
-
-############################################################################################################
-
-y_1 = df.iloc[2:26, 6]
-
-x_1 = df.iloc[2:26, 0]
-
-x = [0,4]
-y_oben = [0.0346791, 0.0346791]
-y_unten = [-0.0346791, -0.0346791]
-
-plt.plot(x_1, y_1, marker='x')
-plt.plot([0,4], [0,0], linestyle='--', color='black')
-plt.fill_between(x, y_oben, color='green', alpha=.5)
-plt.fill_between(x, y_unten, color='green', alpha=.5)
-
-plt.ylim(-6,6)
-plt.xlabel('Strom [A]')
-plt.ylabel('Abweichung [%]')
-plt.legend(['Messwert',"Idealwert"], loc='lower right')
-
-plt.savefig('results/shunt_ads_prozent_vg.svg', format='svg', dpi=1200)
-plt.clf()
-
-############################################################################################################
-
-y_1 = df.iloc[2:26, 4]
-
-x_1 = df.iloc[2:26, 0]
-
-x = [0,4]
-y_oben = [1.387163636, 1.387163636]
-y_unten = [-1.387163636, -1.387163636]
-
-plt.plot(x_1, y_1, marker='x')
-plt.plot([0,4], [0,0], linestyle='--', color='black')
-plt.fill_between(x, y_oben, color='green', alpha=.5)
-plt.fill_between(x, y_unten, color='green', alpha=.5)
-
-plt.ylim(-250,250)
-plt.xlabel('Strom [A]')
-plt.ylabel('Abweichung [mA]')
-plt.legend(['Messwert',"Idealwert"], loc='lower right')
-
-plt.savefig('results/shunt_ads_ma_vg.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_ma.svg', format='svg', dpi=1200)
 plt.clf()
