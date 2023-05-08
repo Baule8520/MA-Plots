@@ -66,3 +66,36 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 #plt.show()
 
 plt.savefig('results/arduino_genauigkeit_mv.svg', format='svg', dpi=1200)
+plt.clf()
+
+############################################################################################################
+
+plt.subplot(2, 1, 1)
+y_1 = df.iloc[2:23, 2]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot([0,5], [0,5], linestyle='--', color='black')
+
+plt.ylabel('ADC-Spannung [V]')
+plt.legend(['Messwert', "Idealwert"], loc='lower right')
+
+
+plt.subplot(2, 1, 2)
+y_1 = df.iloc[2:23, 3]
+
+x = [0,5]
+y_oben = [0.09766, 0.09766]
+y_unten = [-0.09766, -0.09766]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot([0,5], [0,0], linestyle='--', color='black')
+plt.fill_between(x, y_oben, color='green', alpha=.5)
+plt.fill_between(x, y_unten, color='green', alpha=.5)
+
+plt.ylim([-1, 1])
+plt.xlabel('Referenzspannung [V]')
+plt.ylabel('Abweichung [%]')
+
+plt.tight_layout()
+plt.savefig('results/arduino_MA.svg', format='svg', dpi=1200)
+plt.clf()

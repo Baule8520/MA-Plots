@@ -40,7 +40,7 @@ plt.fill_between(x, y_oben, color='green', alpha=.5)
 plt.fill_between(x, y_unten, color='green', alpha=.5)
 
 plt.ylim(-1,1)
-plt.xlabel('Spannung [V]')
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [%]')
 plt.legend(['1-fach Messung', '10-fach Messung', "Idealwert"], loc='lower right')
 
@@ -67,10 +67,47 @@ plt.fill_between(x, y_oben, color='green', alpha=.5)
 plt.fill_between(x, y_unten, color='green', alpha=.5)
 
 plt.ylim(-350,350)
-plt.xlabel('Spannung [V]')
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [mV]')
 plt.legend(['1-fach Messung', '10-fach Messung', "Idealwert"], loc='lower right')
 
 #plt.show()
 
 plt.savefig('results/arduino_55v_genauigkeit_mv.svg', format='svg', dpi=1200)
+plt.clf()
+
+############################################################################################################
+
+plt.subplot(2, 1, 1)
+y_1 = df.iloc[2:23, 2]
+y_2 = df.iloc[2:23, 6]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot(x_2, y_2, marker='^')
+plt.plot([0,55], [0,55], linestyle='--', color='black')
+plt.yticks([0, 10, 20, 30, 40, 50])
+
+plt.ylabel('ADC-Spannung [V]')
+plt.legend(['1-fach Messung', '10-fach Messung', "Idealwert"], loc='lower right')
+
+plt.subplot(2, 1, 2)
+y_1 = df.iloc[2:23, 9]
+y_2 = df.iloc[2:23, 13]
+
+x = [0,55]
+y_oben = [0.09765636, 0.09765636]
+y_unten = [-0.09765636, -0.09765636]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot(x_2, y_2, marker='^')
+plt.plot([0,55], [0,0], linestyle='--', color='black')
+plt.fill_between(x, y_oben, color='green', alpha=.5)
+plt.fill_between(x, y_unten, color='green', alpha=.5)
+
+plt.ylim(-1,1)
+plt.xlabel('Referenzspannung [V]')
+plt.ylabel('Abweichung [%]')
+
+plt.tight_layout()
+plt.savefig('results/arduino_55v_MA.svg', format='svg', dpi=1200)
+plt.clf()

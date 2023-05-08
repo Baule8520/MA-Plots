@@ -24,8 +24,6 @@ plt.clf()
 
 y_1 = df.iloc[2:23, 3]
 
-x_1 = df.iloc[2:23, 0]
-
 x = [0,5]
 y_oben = [0.00152588, 0.00152588]
 y_unten = [-0.00152588, -0.00152588]
@@ -36,7 +34,7 @@ plt.fill_between(x, y_oben, color='green', alpha=.5)
 plt.fill_between(x, y_unten, color='green', alpha=.5)
 
 plt.ylim([-1, 1])
-plt.xlabel('Spannung [V]')
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [%]')
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
@@ -50,8 +48,6 @@ plt.clf()
 y_1 = df.iloc[2:23, 4]
 y_1 = y_1 * 1000
 
-x_1 = df.iloc[2:23, 0]
-
 x = [0,5]
 y_oben = [0.076294, 0.076294]
 y_unten = [-0.076294, -0.076294]
@@ -62,10 +58,43 @@ plt.fill_between(x, y_oben, color='green', alpha=.5)
 plt.fill_between(x, y_unten, color='green', alpha=.5)
 
 plt.ylim([-20, 20])
-plt.xlabel('Spannung [V]')
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [mV]')
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
 plt.savefig('results/ads1115_genauigkeit_mv.svg', format='svg', dpi=1200)
+plt.clf()
+
+############################################################################################################
+
+plt.subplot(2, 1, 1)
+y_1 = df.iloc[2:23, 1]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot([0,5], [0,5], linestyle='--', color='black')
+
+plt.ylabel('ADC-Spannung [V]')
+plt.legend(['Messwert', "Idealwert"], loc='lower right')
+
+
+plt.subplot(2, 1, 2)
+y_1 = df.iloc[2:23, 3]
+
+x = [0,5]
+y_oben = [0.00152588, 0.00152588]
+y_unten = [-0.00152588, -0.00152588]
+
+plt.plot(x_1, y_1, marker='x')
+plt.plot([0,5], [0,0], linestyle='--', color='black')
+plt.fill_between(x, y_oben, color='green', alpha=.5)
+plt.fill_between(x, y_unten, color='green', alpha=.5)
+
+plt.ylim([-1, 1])
+plt.xlabel('Referenzspannung [V]')
+plt.ylabel('Abweichung [%]')
+
+plt.tight_layout()
+plt.savefig('results/ads1115_MA.svg', format='svg', dpi=1200)
+plt.clf()
