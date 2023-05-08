@@ -26,5 +26,5 @@ Can be found under /results.
 - Hall Sensor very accurate, BUT...
 - reference voltage is crucial --> 0 A = Vref / 2
 - I think in 20 A sensor measurement, there was a up in Vref while measuring from 1 A upwards?
-- Otherwise the 30 A sensor is more accurate...
+- Otherwise the 30 A sensor is more accurate... (?)
 - Also I plotted the data from 0 - 4 A to directly compare with Shunt measurement --> see [here](https://github.com/PaulusElektrus/MA-Plots/tree/main/Shunt)

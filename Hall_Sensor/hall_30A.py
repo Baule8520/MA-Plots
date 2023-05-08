@@ -3,10 +3,10 @@ import pandas as pd
 
 df = pd.read_excel('data/Hall_Sensoren.xlsx')
 
-x_1 = df.iloc[1:56, 6]
+x_1 = df.iloc[1:56, 8]
 print(x_1)
 
-y_1 = df.iloc[1:56, 7]
+y_1 = df.iloc[1:56, 9]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([1.304,3.68], [-18,18], linestyle='--', color='black')
@@ -24,9 +24,9 @@ plt.clf()
 
 ############################################################################################################
 
-x_1 = df.iloc[1:56, 7]
+x_1 = df.iloc[1:56, 9]
 
-y_1 = df.iloc[1:56, 10]
+y_1 = df.iloc[1:56, 13]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([-18,18], [0,0], linestyle='--', color='black')
@@ -43,9 +43,9 @@ plt.clf()
 
 ############################################################################################################
 
-x_1 = df.iloc[1:56, 7]
+x_1 = df.iloc[1:56, 9]
 
-y_1 = df.iloc[1:56, 11]
+y_1 = df.iloc[1:56, 14]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([-18, 18], [0,0], linestyle='--', color='black')
@@ -62,9 +62,9 @@ plt.clf()
 
 ############################################################################################################
 
-x_1 = df.iloc[28:42, 7]
+x_1 = df.iloc[28:42, 9]
 print(x_1)
-y_1 = df.iloc[28:42, 14]
+y_1 = df.iloc[28:42, 17]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,4], [0,0], linestyle='--', color='black')
@@ -76,14 +76,14 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/hall_30A_prozent_shunt.svg', format='svg', dpi=1200)
+plt.savefig('results/hall_30A_prozent_4A.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
-x_1 = df.iloc[28:42, 7]
+x_1 = df.iloc[28:42, 9]
 
-y_1 = df.iloc[28:42, 11]
+y_1 = df.iloc[28:42, 14]
 y_1 = y_1 * 1000
 
 plt.plot(x_1, y_1, marker='x')
@@ -96,4 +96,4 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/hall_30A_A_shunt.svg', format='svg', dpi=1200)
+plt.savefig('results/hall_30A_A_4A.svg', format='svg', dpi=1200)

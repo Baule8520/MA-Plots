@@ -26,7 +26,7 @@ plt.clf()
 
 x_1 = df.iloc[1:56, 1]
 
-y_1 = df.iloc[1:56, 4]
+y_1 = df.iloc[1:56, 5]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([-18,18], [0,0], linestyle='--', color='black')
@@ -45,7 +45,7 @@ plt.clf()
 
 x_1 = df.iloc[1:56, 1]
 
-y_1 = df.iloc[1:56, 5]
+y_1 = df.iloc[1:56, 6]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([-18, 18], [0,0], linestyle='--', color='black')
@@ -64,7 +64,8 @@ plt.clf()
 
 x_1 = df.iloc[28:42, 1]
 print(x_1)
-y_1 = df.iloc[28:42, 13]
+y_1 = df.iloc[28:42, 16]
+print(y_1)
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,4], [0,0], linestyle='--', color='black')
@@ -76,14 +77,14 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/hall_20A_prozent_shunt.svg', format='svg', dpi=1200)
+plt.savefig('results/hall_20A_prozent_4A.svg', format='svg', dpi=1200)
 plt.clf()
 
 ############################################################################################################
 
 x_1 = df.iloc[28:42, 1]
 
-y_1 = df.iloc[28:42, 5]
+y_1 = df.iloc[28:42, 6]
 y_1 = y_1 * 1000
 
 plt.plot(x_1, y_1, marker='x')
@@ -96,4 +97,4 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/hall_20A_A_shunt.svg', format='svg', dpi=1200)
+plt.savefig('results/hall_20A_mA_4A.svg', format='svg', dpi=1200)
