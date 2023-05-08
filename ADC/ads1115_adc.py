@@ -68,4 +68,4 @@ plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 #plt.show()
 
-plt.savefig('results/ads1115_genauigkeit_v.svg', format='svg', dpi=1200)
+plt.savefig('results/ads1115_genauigkeit_mv.svg', format='svg', dpi=1200)
