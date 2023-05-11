@@ -9,6 +9,7 @@ More information can be found in the Readme of the selected hardware folder...
 - Hall_Sensor = Strommessung mit Hall Sensor
 - Inverter = Wechselrichter [outdated]
 - MCP4151 = Elektronisches Potentiometer
+- Oszilloscope = All Oszilloscope measurements (Used Software: [OpenHantek_to_Plot](https://github.com/PaulusElektrus/OpenHantek_to_Plot))
 - Shunt = Strommessung mit Shunt Widerstand
 
 #### Used Software
