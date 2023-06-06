@@ -7,6 +7,7 @@ More information can be found in the Readme of the selected hardware folder...
 - ADC = Analog-Digital-Konverter
 - DCDC = Gleichspannungswandler [outdated]
 - Hall_Sensor = Strommessung mit Hall Sensor
+- InfluxDB = Data from household & energy storage sent online to InfluxDB database
 - Inverter = Wechselrichter [outdated]
 - MCP4151 = Elektronisches Potentiometer
 - Oszilloscope = All Oszilloscope measurements (Used Software: [OpenHantek_to_Plot](https://github.com/PaulusElektrus/OpenHantek_to_Plot))
