@@ -5,7 +5,7 @@ fig, ax1 = plt.subplots()
 
 r2 = 0.05
 r3 = 0.0075
-r4 = 0.001
+r4 = 0.0025
 
 i = np.linspace(0, 20, 20)
 iQuadrat = np.square(i)
@@ -24,9 +24,9 @@ ax1.set_ylabel('Verlustleistung [W]', color=color)
 ax1.tick_params(axis='y', labelcolor=color)
 ax1.set_ylim(0,2)
 
-ax1.plot(i, p2, marker='^', color=color)
-ax1.plot(i, p3, marker='s', color=color)
-ax1.plot(i, p4, marker='d', color=color)
+ax1.plot(i, p2, marker='x', color=color)
+ax1.plot(i, p3, marker='^', color=color)
+ax1.plot(i, p4, marker='s', color=color)
 
 ax2 = ax1.twinx()
 
@@ -35,11 +35,11 @@ ax2.set_ylabel('Spannungsfall [mV]', color=color)
 ax2.tick_params(axis='y', labelcolor=color)
 ax2.set_ylim(0,200)
 
-ax2.plot(i, u2, marker='^', color=color)
-ax2.plot(i, u3, marker='s', color=color)
-ax2.plot(i, u4, marker='d', color=color)
+ax2.plot(i, u2, marker='x', color=color)
+ax2.plot(i, u3, marker='^', color=color)
+ax2.plot(i, u4, marker='s', color=color)
 
-plt.legend(['0.05 Ohm','0.0075 Ohm','0.001 Ohm'], loc='upper left')
+plt.legend(['0.05 Ohm','0.0075 Ohm','0.0025 Ohm'], loc='upper left')
 
 plt.tight_layout()
 
