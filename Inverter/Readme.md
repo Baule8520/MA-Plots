@@ -18,7 +18,7 @@ IMPORTANT:
 ## Used Inverters
 
     - GMI 100W
-    - GMI 300W 
+    - GMI 300W (preferably use)
 
 ## Plots
 
