@@ -1,5 +1,3 @@
-import numpy as np
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -30,4 +28,4 @@ plt.legend(['Ausgangsspannung 15 V', 'Ausgangsspannung 20 V','Ausgangsspannung 2
 
 #plt.show()
 
-plt.savefig('results/DCDC_SU_20A.svg', format='svg', dpi=1200)
+plt.savefig('results/DCDC_SU_40A.svg', format='svg', dpi=1200)
