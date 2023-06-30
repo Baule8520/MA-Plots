@@ -1,4 +1,4 @@
-# DCDC
+# SMPS - Schaltnetzteil
 
 I measured the efficiency of 50V - 3A SMPS (Netzteil)
 

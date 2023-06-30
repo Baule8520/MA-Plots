@@ -13,6 +13,8 @@ More information can be found in the Readme of the selected hardware folder...
 - MCP4151 = Elektronisches Potentiometer
 - Oszilloscope = All Oszilloscope measurements (Used Software: [OpenHantek_to_Plot](https://github.com/PaulusElektrus/OpenHantek_to_Plot))
 - Shunt = Strommessung mit Shunt Widerstand
+- Simulation = Plots from [Simulation Results](https://github.com/PaulusElektrus/MA-Simulation)
+- SMPS = Switching Mode Power Supply Efficincy Measurement
 
 #### Used Software
 
