@@ -6,17 +6,14 @@ df = pd.read_csv("data/auslegungSimulation3.csv")
 fig, ax1 = plt.subplots()
 
 # Create the 2D scatter plot
-ax1.plot(df["capacity"], df["ssr"]*100, color="orange")
-
+ax1.plot(df["capacity"], df["scr"]*100, color="tab:blue")
 ax2 = ax1.twinx()
-
-plt.plot(df["capacity"], df["scr"]*100, color="tab:blue")
-
+ax2.plot(df["capacity"], df["ssr"]*100, color="orange")
 ax1.set_xlabel('Akkukapazität [kWh]')
-ax1.set_ylabel('Autarkiegrad [%]')
-ax1.set_ylim([19.5,35.5])
-ax2.set_ylim([65,105])
-ax2.set_ylabel('Eigenverbrauchsanteil [%]')
+ax2.set_ylabel('Autarkiegrad [%]', color = "orange")
+ax2.set_ylim([18.5,30.5])
+ax1.set_ylim([58,102])
+ax1.set_ylabel('Eigenverbrauchsanteil [%]', color = "tab:blue")
 
 # Show the plot
 plt.tight_layout()
@@ -32,7 +29,7 @@ df = pd.read_csv("data/auslegungSimulation2.csv")
 # Create the 3D scatter plot
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='viridis', label='Data Points')
+cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='brg', label='Data Points')
 
 # Add a legend
 cbar = fig.colorbar(cax)
@@ -60,7 +57,7 @@ df = pd.read_csv("data/auslegungSimulation4.csv")
 # Create the 3D scatter plot
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='viridis', label='Data Points')
+cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='brg', label='Data Points')
 
 # Add a legend
 cbar = fig.colorbar(cax)
@@ -86,17 +83,17 @@ plt.clf()
 df = pd.read_csv("data/auslegungSimulation5.csv")
 
 # Create the 3D scatter plot
-cax = plt.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, c=df["ssr"]*100, cmap='viridis', label='Data Points')
-
-# Add a legend
-cbar = fig.colorbar(cax)
-cbar.set_label("Eigenverbrauchsanteil [%]")
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter3D(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["ssr"]*100, c=df["ssr"]*100, cmap='brg')
 
 # Add labels and title
+ax.set_xlabel('Ladeleistung [W]')
+ax.set_ylabel('Entladeleistung [W]')
+ax.set_zlabel("Eigenverbrauchsanteil [%]")
+
 ax.set_xticks([400,500,600,700,800])
 ax.set_yticks([100,200,300,400,500])
-plt.xlabel('Ladeleistung [W]')
-plt.ylabel('Entladeleistung [W]')
 
 # Show the plot
 plt.tight_layout()
@@ -109,12 +106,9 @@ plt.clf()
 
 df = pd.read_csv("data/auslegungSimulation6.csv")
 
-# Create the 3D scatter plot
-cax = plt.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, c=df["ssr"]*100, cmap='viridis', label='Data Points')
-
-# Add a legend
-cbar = fig.colorbar(cax)
-cbar.set_label("Eigenverbrauchsanteil [%]")
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter3D(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["ssr"]*100, c=df["ssr"]*100, cmap='brg')
 
 # Add labels and title
 ax.set_xticks([500,600,700,800])
@@ -136,7 +130,7 @@ df = pd.read_csv("data/auslegungSimulation1.csv")
 # Create the 3D scatter plot
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='viridis', label='Data Points')
+cax = ax.scatter(df["max_power_charging"]*1000, df["max_power_discharging"]*1000, df["capacity"], c=df["scr"]*100, cmap='brg', label='Data Points')
 
 # Add a legend
 cbar = fig.colorbar(cax)
