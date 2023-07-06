@@ -19,7 +19,7 @@ plt.plot([-18, 18], [0,0], linestyle='--', color='black')
 
 plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [A]')
-plt.legend(['5 A', "20 A", "30 A"], loc='lower right')
+plt.legend(['5 A Hall Sensor', "20 A Hall Sensor", "30 A Hall Sensor"], loc='lower right')
 
 #plt.show()
 

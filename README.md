@@ -6,7 +6,7 @@ More information can be found in the Readme of the selected hardware folder...
 
 - ADC = Analog-Digital-Konverter
 - DCDC = Gleichspannungswandler
-- Hall_Sensor = Strommessung mit Hall Sensor
+- HallSensor = Strommessung mit Hall Sensor
 - InfluxDB = Data from household & energy storage sent online to InfluxDB database
 - Inverter = Wechselrichter
 - LiIon = Simple plot to estimate LiIon charging state
