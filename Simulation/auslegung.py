@@ -17,7 +17,7 @@ p1, = ax.plot(df["capacity"], df["costs"], "C0", label="Stromkosten")
 p2, = twin1.plot(df["capacity"], df["ssr"]*100, "C1", label="Autarkiegrad")
 p3, = twin2.plot(df["capacity"], df["scr"]*100, "C2", label="Eigenverbrauchsanteil")
 
-ax.set(xlim=(0, 4), ylim=(635, 705), xlabel="Akkukapazität [KWh]", ylabel="Stromkosten [€]")
+ax.set(xlim=(0, 4), ylim=(635, 705), xlabel="Akkukapazität [kWh]", ylabel="Stromkosten [€]")
 twin1.set(ylim=(19.5,28.5), ylabel="Autarkiegrad [%]")
 twin2.set(ylim=(68,102), ylabel="Eigenverbrauchsanteil [%]")
 
