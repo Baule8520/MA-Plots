@@ -1,5 +1,7 @@
 # OpenHantek to Plot
 
+## Plots are generated with: python plot.py ./data -s ./results
+
 &nbsp;
 
 ### Little command line tool with GUI to build a plot out of exported .csv file(s) from [OpenHantek](http://openhantek.org/).

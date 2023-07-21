@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import FormatStrFormatter
+
+decimal_places = 1
 
 df = pd.read_excel('data/ADS1115_Shunt.xlsx')
 df2 = pd.read_excel('data/0.0075Ohm_Shunt.xlsx')
@@ -22,8 +25,9 @@ plt.plot([0,15], [0,0], linestyle='--', color='black')
 
 plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [mA]')
-plt.legend(['0,05 Ohm', '0,0075 Ohm', "0,0025 Ohm"], loc='lower right')
+plt.legend(['0,05 Ohm', '0,0075 Ohm', "0,0025 Ohm", "Idealwert"], loc='lower right')
 plt.ylim([-75, 15])
+plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
 
 plt.savefig('results/genauigkeit_shunt_ma.svg', format='svg', dpi=1200)
 plt.clf()

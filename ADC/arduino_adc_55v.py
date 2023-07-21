@@ -87,6 +87,7 @@ plt.plot(x_2, y_2, marker='^')
 plt.plot([0,55], [0,55], linestyle='--', color='black')
 plt.yticks([0, 10, 20, 30, 40, 50])
 
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
 plt.legend(['1-fach Messung', '10-fach Messung', "Idealwert"], loc='lower right')
 
@@ -107,6 +108,7 @@ plt.fill_between(x, y_unten, color='green', alpha=.5)
 plt.ylim(-1,1)
 plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [%]')
+plt.legend(['1-fach Messung', '10-fach Messung', "Idealwert"], loc='upper right')
 
 plt.tight_layout()
 plt.savefig('results/arduino_55v_MA.svg', format='svg', dpi=1200)

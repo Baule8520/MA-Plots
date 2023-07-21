@@ -44,6 +44,7 @@ y_4 = df_4.iloc[:, 3]
 plt.subplot(2, 2, 1)
 plt.ylabel('Widerstand [$\Omega$]')
 plt.plot(x_4, y_4, marker='o')
+plt.xlabel('Potentiometer Stellung [0 - 2]')
 plt.xticks([0, 1, 2])
 plt.yticks([0, 200, 400, 600, 800, 1000, 1200])
 plt.title("100 k$\Omega$ Poti normal")
@@ -52,6 +53,7 @@ plt.annotate('Minimum: 135 $\Omega$', xy=(0, 134.64), xytext=(0.5, 1000),
 
 plt.subplot(2, 2, 2)
 plt.plot(x_2, y_2, marker='o')
+plt.xlabel('Potentiometer Stellung [253 - 255]')
 plt.xticks([253, 254, 255])
 plt.yticks([0, 200, 400, 600, 800, 1000, 1200])
 plt.annotate('Minimum: 479 $\Omega$', xy=(255, 479.06), xytext=(253.5, 200),

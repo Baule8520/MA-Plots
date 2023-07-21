@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import FormatStrFormatter
 
 df = pd.read_excel('data/Arduino&ESP.xlsx')
 print (df)
@@ -84,6 +85,8 @@ plt.clf()
 
 ############################################################################################################
 
+decimal_places = 1
+
 plt.subplot(2, 1, 1)
 x_1 = df.iloc[2:23, 5]
 x_2 = df.iloc[2:23, 10]
@@ -98,8 +101,11 @@ plt.plot(x_2, y_2, marker='^')
 plt.plot(x_3, y_3, marker='s')
 plt.plot([0,3.3], [0,3.3], linestyle='--', color='black')
 
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
-plt.legend(['1-fach Messung', '5-fach Messung','10-fach Messung', "Idealwert"], loc='lower right')
+plt.legend(['1-fach Messung', '5-fach Messung','10-fach Messung', "Idealwert"], loc='upper left')
+plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
+plt.gca().yaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
 
 plt.subplot(2, 1, 2)
 y_1 = df.iloc[2:23, 8]
@@ -119,6 +125,9 @@ plt.fill_between(x, y_unten, color='green', alpha=.5)
 
 plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [%]')
+plt.legend(['1-fach Messung', '5-fach Messung','10-fach Messung', "Idealwert"], loc='upper left')
+plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
+plt.gca().yaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
 
 plt.tight_layout()
 plt.savefig('results/esp32_MA.svg', format='svg', dpi=1200)

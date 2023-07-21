@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
 
 df = pd.read_excel('data/Arduino&ESP.xlsx')
@@ -70,13 +71,18 @@ plt.clf()
 
 ############################################################################################################
 
+decimal_places = 1
+
 plt.subplot(2, 1, 1)
 y_1 = df.iloc[2:23, 2]
 
 plt.plot(x_1, y_1, marker='x')
 plt.plot([0,5], [0,5], linestyle='--', color='black')
 
+plt.xlabel('Referenzspannung [V]')
 plt.ylabel('ADC-Spannung [V]')
+plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
+plt.gca().yaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
 plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 
@@ -95,6 +101,9 @@ plt.fill_between(x, y_unten, color='green', alpha=.5)
 plt.ylim([-1, 1])
 plt.xlabel('Referenzspannung [V]')
 plt.ylabel('Abweichung [%]')
+plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
+plt.gca().yaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
+plt.legend(['Messwert', "Idealwert"], loc='lower right')
 
 plt.tight_layout()
 plt.savefig('results/arduino_MA.svg', format='svg', dpi=1200)
