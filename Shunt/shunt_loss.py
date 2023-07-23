@@ -24,9 +24,9 @@ ax1.set_ylabel('Verlustleistung [W]', color=color)
 ax1.tick_params(axis='y', labelcolor=color)
 ax1.set_ylim(0,2)
 
-ax1.plot(i, p2, marker='x', color=color, label='0.05 Ohm')
-ax1.plot(i, p3, marker='^', color=color, label='0.0075 Ohm')
-ax1.plot(i, p4, marker='s', color=color, label='0.0025 Ohm')
+ax1.plot(i, p2, marker='x', color=color, label='0.05 $\Omega$')
+ax1.plot(i, p3, marker='^', color=color, label='0.0075 $\Omega$')
+ax1.plot(i, p4, marker='s', color=color, label='0.0025 $\Omega$')
 
 plt.legend(loc='upper left')
 
@@ -37,9 +37,9 @@ ax2.set_ylabel('Spannungsfall [mV]', color=color)
 ax2.tick_params(axis='y', labelcolor=color)
 ax2.set_ylim(0,200)
 
-ax2.plot(i, u2, marker='x', color=color, label='0.05 Ohm')
-ax2.plot(i, u3, marker='^', color=color, label='0.0075 Ohm')
-ax2.plot(i, u4, marker='s', color=color, label='0.0025 Ohm')
+ax2.plot(i, u2, marker='x', color=color, label='0.05 $\Omega$')
+ax2.plot(i, u3, marker='^', color=color, label='0.0075 $\Omega$')
+ax2.plot(i, u4, marker='s', color=color, label='0.0025 $\Omega$')
 
 plt.legend(loc='upper right')
 

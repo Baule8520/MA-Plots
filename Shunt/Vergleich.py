@@ -25,7 +25,7 @@ plt.plot([0,15], [0,0], linestyle='--', color='black')
 
 plt.xlabel('Strom [A]')
 plt.ylabel('Abweichung [mA]')
-plt.legend(['0,05 Ohm', '0,0075 Ohm', "0,0025 Ohm", "Idealwert"], loc='lower right')
+plt.legend(['0.05 $\Omega$', '0.0075 $\Omega$', "0.0025 $\Omega$", "Idealwert"], loc='lower right')
 plt.ylim([-75, 15])
 plt.gca().xaxis.set_major_formatter(FormatStrFormatter(f'%.{decimal_places}f'))
 
